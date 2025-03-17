@@ -1,0 +1,135 @@
+{
+  "name": "SimpScript",
+  "scopeName": "source.simpscript",
+  "fileTypes": ["simp"],
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#functions"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#arrays"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "match": "#.*$",
+      "name": "comment.line.number-sign.simpscript"
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(if|else|endif|elseif|while|endwhile|function|endfunction|return|true|false|null)\\b",
+          "name": "keyword.control.simpscript"
+        },
+        {
+          "match": "\\b(show|shownl|nextl|ask)\\b",
+          "name": "keyword.other.simpscript"
+        },
+        {
+          "match": "\\b(greater than|less than|equal to|not equal to|and|or|not)\\b",
+          "name": "keyword.operator.word.simpscript"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.simpscript",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.simpscript",
+              "match": "\\\\."
+            }
+          ]
+        },
+        {
+          "name": "string.quoted.single.simpscript",
+          "begin": "'",
+          "end": "'",
+          "patterns": [
+            {
+              "name": "constant.character.escape.simpscript",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "\\b[0-9]+\\b",
+          "name": "constant.numeric.integer.simpscript"
+        },
+        {
+          "match": "\\b[0-9]+\\.[0-9]+\\b",
+          "name": "constant.numeric.float.simpscript"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "\\+|\\-|\\*|\\/|\\%|\\=|\\>|\\<|\\!\\=|\\>\\=|\\<\\=|\\&\\&|\\|\\||\\!",
+          "name": "keyword.operator.simpscript"
+        }
+      ]
+    },
+    "functions": {
+      "patterns": [
+        {
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*\\(",
+          "captures": {
+            "1": {
+              "name": "entity.name.function.simpscript"
+            }
+          }
+        }
+      ]
+    },
+    "variables": {
+      "patterns": [
+        {
+          "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\b",
+          "name": "variable.other.simpscript"
+        }
+      ]
+    },
+    "arrays": {
+      "begin": "\\[",
+      "end": "\\]",
+      "patterns": [
+        {
+          "include": "#strings"
+        },
+        {
+          "include": "#numbers"
+        },
+        {
+          "include": "#variables"
+        }
+      ],
+      "name": "meta.structure.array.simpscript"
+    }
+  }
+} 

@@ -1,0 +1,79 @@
+{
+    "name": "SimpScript",
+    "author": "SimpScript Team",
+    "variables": {
+        "blue": "#569CD6",
+        "light-blue": "#9CDCFE",
+        "green": "#6A9955",
+        "light-green": "#B5CEA8",
+        "purple": "#C586C0",
+        "orange": "#CE9178",
+        "yellow": "#DCDCAA",
+        "white": "#D4D4D4",
+        "black": "#1E1E1E"
+    },
+    "globals": {
+        "background": "var(black)",
+        "foreground": "var(white)",
+        "caret": "var(white)",
+        "line_highlight": "#2D2D30",
+        "selection": "#264F78",
+        "selection_border": "#264F78",
+        "inactive_selection": "#264F7855"
+    },
+    "rules": [
+        {
+            "name": "Comment",
+            "scope": "comment.line.number-sign.simpscript",
+            "foreground": "var(green)"
+        },
+        {
+            "name": "String",
+            "scope": "string.quoted.double.simpscript, string.quoted.single.simpscript",
+            "foreground": "var(orange)"
+        },
+        {
+            "name": "Number",
+            "scope": "constant.numeric.integer.simpscript, constant.numeric.float.simpscript",
+            "foreground": "var(light-green)"
+        },
+        {
+            "name": "Keywords",
+            "scope": "keyword.control.simpscript",
+            "foreground": "var(purple)",
+            "font_style": "bold"
+        },
+        {
+            "name": "SimpScript Keywords",
+            "scope": "keyword.other.simpscript",
+            "foreground": "var(purple)",
+            "font_style": "bold"
+        },
+        {
+            "name": "Human-like Keywords",
+            "scope": "keyword.operator.word.simpscript",
+            "foreground": "var(blue)",
+            "font_style": "italic"
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator.simpscript",
+            "foreground": "var(white)"
+        },
+        {
+            "name": "Function Names",
+            "scope": "entity.name.function.simpscript",
+            "foreground": "var(yellow)"
+        },
+        {
+            "name": "Variables",
+            "scope": "variable.other.simpscript",
+            "foreground": "var(light-blue)"
+        },
+        {
+            "name": "Arrays",
+            "scope": "meta.structure.array.simpscript",
+            "foreground": "var(white)"
+        }
+    ]
+} 

@@ -1,0 +1,47 @@
+{
+  "name": "simpscript",
+  "displayName": "SimpScript Language Support",
+  "description": "Syntax highlighting for SimpScript language files",
+  "version": "0.1.0",
+  "publisher": "SimpScript-Team",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "simpscript",
+        "aliases": [
+          "SimpScript",
+          "simpscript"
+        ],
+        "extensions": [
+          ".simp"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "simpscript",
+        "scopeName": "source.simpscript",
+        "path": "./syntaxes/simpscript.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "SimpScript Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/simpscript-dark.json"
+      },
+      {
+        "label": "SimpScript Light",
+        "uiTheme": "vs",
+        "path": "./themes/simpscript-light.json"
+      }
+    ]
+  }
+} 

@@ -40,6 +40,15 @@ Known limitations:
 
 SimpScript files use the `.simp` extension.
 
+## Editor Support
+
+SimpScript comes with syntax highlighting support for various text editors:
+
+- Visual Studio Code: Custom extension with dark and light themes
+- Sublime Text: Syntax highlighting and color scheme
+
+See the `editor-extensions` directory for installation instructions.
+
 ## Example
 
 ```simp

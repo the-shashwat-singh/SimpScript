@@ -1,0 +1,79 @@
+%YAML 1.2
+---
+# Sublime Text syntax definition for SimpScript
+name: SimpScript
+file_extensions:
+  - simp
+scope: source.simpscript
+contexts:
+  main:
+    # Comments
+    - match: '#.*$'
+      scope: comment.line.number-sign.simpscript
+
+    # Keywords
+    - match: '\b(if|else|endif|elseif|while|endwhile|function|endfunction|return|true|false|null)\b'
+      scope: keyword.control.simpscript
+
+    # SimpScript specific keywords
+    - match: '\b(show|shownl|nextl|ask)\b'
+      scope: keyword.other.simpscript
+
+    # Human-like operators
+    - match: '\b(greater than|less than|equal to|not equal to|and|or|not)\b'
+      scope: keyword.operator.word.simpscript
+
+    # Strings
+    - match: '"'
+      scope: punctuation.definition.string.begin.simpscript
+      push: double_quoted_string
+    - match: "'"
+      scope: punctuation.definition.string.begin.simpscript
+      push: single_quoted_string
+
+    # Numbers
+    - match: '\b[0-9]+\b'
+      scope: constant.numeric.integer.simpscript
+    - match: '\b[0-9]+\.[0-9]+\b'
+      scope: constant.numeric.float.simpscript
+
+    # Operators
+    - match: '\+|\-|\*|\/|\%|\=|\>|\<|\!\=|\>\=|\<\=|\&\&|\|\||\!'
+      scope: keyword.operator.simpscript
+
+    # Function calls
+    - match: '\b([a-zA-Z_][a-zA-Z0-9_]*)\s*\('
+      captures:
+        1: entity.name.function.simpscript
+
+    # Variables
+    - match: '\b([a-zA-Z_][a-zA-Z0-9_]*)\b'
+      scope: variable.other.simpscript
+
+    # Arrays
+    - match: '\['
+      scope: punctuation.section.array.begin.simpscript
+      push: array
+    
+  double_quoted_string:
+    - meta_scope: string.quoted.double.simpscript
+    - match: '\\.'
+      scope: constant.character.escape.simpscript
+    - match: '"'
+      scope: punctuation.definition.string.end.simpscript
+      pop: true
+
+  single_quoted_string:
+    - meta_scope: string.quoted.single.simpscript
+    - match: '\\.'
+      scope: constant.character.escape.simpscript
+    - match: "'"
+      scope: punctuation.definition.string.end.simpscript
+      pop: true
+
+  array:
+    - meta_scope: meta.structure.array.simpscript
+    - match: '\]'
+      scope: punctuation.section.array.end.simpscript
+      pop: true
+    - include: main 

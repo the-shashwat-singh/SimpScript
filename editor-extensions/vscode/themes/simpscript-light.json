@@ -1,0 +1,79 @@
+{
+  "name": "SimpScript Light",
+  "type": "light",
+  "colors": {
+    "editor.background": "#FFFFFF",
+    "editor.foreground": "#000000",
+    "editorLineNumber.foreground": "#999999",
+    "editorCursor.foreground": "#000000",
+    "editor.selectionBackground": "#ADD6FF",
+    "editor.selectionHighlightBackground": "#E5EBF1"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": ["comment.line.number-sign.simpscript"],
+      "settings": {
+        "foreground": "#008000"
+      }
+    },
+    {
+      "name": "Keywords",
+      "scope": ["keyword.control.simpscript", "keyword.other.simpscript"],
+      "settings": {
+        "foreground": "#AF00DB",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Human-like Keywords",
+      "scope": ["keyword.operator.word.simpscript"],
+      "settings": {
+        "foreground": "#0000FF",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": ["string.quoted.double.simpscript", "string.quoted.single.simpscript"],
+      "settings": {
+        "foreground": "#A31515"
+      }
+    },
+    {
+      "name": "Numbers",
+      "scope": ["constant.numeric.integer.simpscript", "constant.numeric.float.simpscript"],
+      "settings": {
+        "foreground": "#098658"
+      }
+    },
+    {
+      "name": "Operators",
+      "scope": ["keyword.operator.simpscript"],
+      "settings": {
+        "foreground": "#000000"
+      }
+    },
+    {
+      "name": "Functions",
+      "scope": ["entity.name.function.simpscript"],
+      "settings": {
+        "foreground": "#795E26"
+      }
+    },
+    {
+      "name": "Variables",
+      "scope": ["variable.other.simpscript"],
+      "settings": {
+        "foreground": "#001080"
+      }
+    },
+    {
+      "name": "Arrays",
+      "scope": ["meta.structure.array.simpscript"],
+      "settings": {
+        "foreground": "#000000"
+      }
+    }
+  ]
+} 

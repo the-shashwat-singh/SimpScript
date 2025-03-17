@@ -1,0 +1,79 @@
+{
+  "name": "SimpScript Dark",
+  "type": "dark",
+  "colors": {
+    "editor.background": "#1E1E1E",
+    "editor.foreground": "#D4D4D4",
+    "editorLineNumber.foreground": "#858585",
+    "editorCursor.foreground": "#D4D4D4",
+    "editor.selectionBackground": "#264F78",
+    "editor.selectionHighlightBackground": "#2D2D30"
+  },
+  "tokenColors": [
+    {
+      "name": "Comments",
+      "scope": ["comment.line.number-sign.simpscript"],
+      "settings": {
+        "foreground": "#6A9955"
+      }
+    },
+    {
+      "name": "Keywords",
+      "scope": ["keyword.control.simpscript", "keyword.other.simpscript"],
+      "settings": {
+        "foreground": "#C586C0",
+        "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "Human-like Keywords",
+      "scope": ["keyword.operator.word.simpscript"],
+      "settings": {
+        "foreground": "#569CD6",
+        "fontStyle": "italic"
+      }
+    },
+    {
+      "name": "Strings",
+      "scope": ["string.quoted.double.simpscript", "string.quoted.single.simpscript"],
+      "settings": {
+        "foreground": "#CE9178"
+      }
+    },
+    {
+      "name": "Numbers",
+      "scope": ["constant.numeric.integer.simpscript", "constant.numeric.float.simpscript"],
+      "settings": {
+        "foreground": "#B5CEA8"
+      }
+    },
+    {
+      "name": "Operators",
+      "scope": ["keyword.operator.simpscript"],
+      "settings": {
+        "foreground": "#D4D4D4"
+      }
+    },
+    {
+      "name": "Functions",
+      "scope": ["entity.name.function.simpscript"],
+      "settings": {
+        "foreground": "#DCDCAA"
+      }
+    },
+    {
+      "name": "Variables",
+      "scope": ["variable.other.simpscript"],
+      "settings": {
+        "foreground": "#9CDCFE"
+      }
+    },
+    {
+      "name": "Arrays",
+      "scope": ["meta.structure.array.simpscript"],
+      "settings": {
+        "foreground": "#D4D4D4"
+      }
+    }
+  ]
+} 
