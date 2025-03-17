@@ -15,7 +15,7 @@ To build SimpScript, you need:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/the-shashwat-sing/SimpScript.git
+git clone https://github.com/the-shashwat-singh/SimpScript.git
 cd SimpScript
 ```
 
