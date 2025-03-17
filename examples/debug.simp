@@ -1,0 +1,3 @@
+# Simple debug program
+shownl 123
+shownl "Testing" 

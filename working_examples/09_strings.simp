@@ -1,0 +1,32 @@
+# String operations examples
+
+# String assignment
+greeting = "Hello"
+name = "World"
+
+# String concatenation
+fullGreeting = greeting + ", " + name + "!"
+shownl fullGreeting
+
+# String with numbers
+age = 25
+message = "I am " + age + " years old."
+shownl message
+
+# Multiple concatenations
+language = "SimpScript"
+version = 1.0
+info = "This is " + language + " version " + version
+shownl info
+
+# String in expressions
+a = "A"
+b = "B"
+c = "C"
+combined = a + b + c
+shownl "Combined: " + combined
+
+# String repetition (simulated)
+star = "*"
+stars = star + star + star + star + star
+shownl "Stars: " + stars 

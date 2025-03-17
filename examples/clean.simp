@@ -1,0 +1,8 @@
+name = "World"
+count = 3
+shownl "Hello, " + name + "! Counting to " + count
+i = 1
+while i <= count
+    shownl "Count: " + i
+    i = i + 1
+endwhile 

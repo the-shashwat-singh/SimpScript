@@ -1,0 +1,32 @@
+# Variables and basic arithmetic
+
+# Variable assignments
+name = "SimpScript"
+version = 1.0
+count = 5
+
+# Display variables
+shownl "Language: " + name
+shownl "Version: " + version
+shownl "Count: " + count
+
+# Arithmetic operations
+a = 10
+b = 5
+
+shownl "a + b = " + (a + b)
+shownl "a - b = " + (a - b)
+shownl "a * b = " + (a * b)
+shownl "a / b = " + (a / b)
+shownl "a % b = " + (a % b)
+
+# Combined assignment and arithmetic
+total = 0
+total = total + a    # Add a to total
+shownl "Total: " + total
+
+# Multiple assignments
+x = y = z = 100
+shownl "x = " + x
+shownl "y = " + y
+shownl "z = " + z 

@@ -1,0 +1,139 @@
+# SimpScript Math and Logic Operations
+
+# Mathematical operations
+a = 15
+b = 4
+
+shownl "Basic Arithmetic:"
+shownl "a = " + a + ", b = " + b
+shownl "a + b = " + (a + b)  # Addition
+shownl "a - b = " + (a - b)  # Subtraction
+shownl "a * b = " + (a * b)  # Multiplication
+shownl "a / b = " + (a / b)  # Division
+shownl "a % b = " + (a % b)  # Modulo (remainder)
+
+# More complex calculations
+shownl nextl + "More complex calculations:"
+result = (a + b) * (a - b) / 2
+shownl "(a + b) * (a - b) / 2 = " + result
+
+# Mathematical functions
+function square(x)
+    return x * x
+endfunction
+
+function cube(x)
+    return x * x * x
+endfunction
+
+function power(base, exponent)
+    result = 1
+    for i = 0; i < exponent; i = i + 1
+        result = result * base
+    endfor
+    return result
+endfunction
+
+shownl nextl + "Mathematical functions:"
+shownl "square(5) = " + square(5)
+shownl "cube(3) = " + cube(3)
+shownl "power(2, 8) = " + power(2, 8)
+
+# Logical operations
+shownl nextl + "Logical operations:"
+
+x = 10
+y = 20
+
+# Using conventional syntax
+shownl "x = " + x + ", y = " + y
+
+if x < y and x > 0
+    shownl "x is less than y AND x is positive (using conventional syntax)"
+endif
+
+if x < y or y < 0
+    shownl "x is less than y OR y is negative (using conventional syntax)"
+endif
+
+if not (x > y)
+    shownl "x is NOT greater than y (using conventional syntax)"
+endif
+
+# Using human-like syntax
+if x less than y and x greater than 0
+    shownl "x is less than y AND x is positive (using human-like syntax)"
+endif
+
+if x less than y or y less than 0
+    shownl "x is less than y OR y is negative (using human-like syntax)"
+endif
+
+if not (x greater than y)
+    shownl "x is NOT greater than y (using human-like syntax)"
+endif
+
+# Demonstrate compound conditions
+shownl nextl + "Compound conditions:"
+
+age = 25
+income = 50000
+
+if age >= 18 and income >= 30000
+    shownl "Person qualifies for a loan (using >= syntax)"
+endif
+
+if age at least 18 and income at least 30000
+    shownl "Person qualifies for a loan (using 'at least' syntax)"
+endif
+
+# Fibonacci sequence calculation
+function fibonacci(n)
+    if n <= 0
+        return 0
+    endif
+    
+    if n equals 1 or n equals 2
+        return 1
+    endif
+    
+    return fibonacci(n - 1) + fibonacci(n - 2)
+endfunction
+
+shownl nextl + "Fibonacci Sequence:"
+for i = 0; i < 10; i = i + 1
+    shownl "fibonacci(" + i + ") = " + fibonacci(i)
+endfor
+
+# Prime number checker
+function isPrime(n)
+    if n <= 1
+        return false
+    endif
+    
+    if n equals 2
+        return true
+    endif
+    
+    if n % 2 equals 0
+        return false
+    endif
+    
+    i = 3
+    while i * i <= n
+        if n % i equals 0
+            return false
+        endif
+        i = i + 2
+    endwhile
+    
+    return true
+endfunction
+
+shownl nextl + "Prime Numbers from 1 to 20:"
+for i = 1; i <= 20; i = i + 1
+    if isPrime(i)
+        show i + " "
+    endif
+endfor
+shownl "" 

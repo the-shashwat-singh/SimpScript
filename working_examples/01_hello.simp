@@ -1,0 +1,4 @@
+# Simple Hello World program
+
+shownl "Hello, World!"
+shownl "Welcome to SimpScript!" 

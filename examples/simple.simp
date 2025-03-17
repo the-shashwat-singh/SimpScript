@@ -1,0 +1,5 @@
+# Simple SimpScript program
+shownl "Hello, World!"
+name = "SimpScript"
+version = 1.0
+shownl "Welcome to " + name + " version " + version 

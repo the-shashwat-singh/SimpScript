@@ -1,0 +1,42 @@
+# Loop examples
+
+# Simple counting loop
+shownl "Counting from 1 to 5:"
+i = 1
+while i <= 5
+    shownl i
+    i = i + 1
+endwhile
+
+# Loop with conditional break
+shownl "Even numbers under 10:"
+j = 0
+while j < 10
+    if j % 2 == 0
+        shownl j
+    endif
+    j = j + 1
+endwhile
+
+# Nested loops
+shownl "Multiplication table:"
+row = 1
+while row <= 3
+    col = 1
+    show row + ": "
+    while col <= 3
+        show (row * col) + " "
+        col = col + 1
+    endwhile
+    shownl ""
+    row = row + 1
+endwhile
+
+# Using natural language in loop condition
+shownl "Countdown:"
+count = 5
+while count greater than 0
+    shownl count
+    count = count - 1
+endwhile
+shownl "Blast off!" 

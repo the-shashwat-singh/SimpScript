@@ -1,0 +1,3 @@
+# Simple test
+name = "World"
+shownl "Hello, " + name 

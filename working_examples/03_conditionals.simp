@@ -1,0 +1,48 @@
+# Conditional statements
+
+# Basic if statement
+x = 10
+y = 5
+
+if x > y
+    shownl "x is greater than y"
+endif
+
+# If-else statement
+age = 20
+
+if age >= 18
+    shownl "You are an adult"
+else
+    shownl "You are a minor"
+endif
+
+# Nested if statements
+score = 85
+
+if score >= 90
+    shownl "Grade: A"
+else
+    if score >= 80
+        shownl "Grade: B"
+    else
+        if score >= 70
+            shownl "Grade: C"
+        else
+            shownl "Grade: F"
+        endif
+    endif
+endif
+
+# Using natural language comparison
+temperature = 28
+
+if temperature greater than 30
+    shownl "It's hot outside!"
+else
+    if temperature less than 10
+        shownl "It's cold outside!"
+    else
+        shownl "The weather is pleasant"
+    endif
+endif 

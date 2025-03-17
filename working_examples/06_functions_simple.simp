@@ -1,0 +1,26 @@
+# Simple function examples
+
+# Function with no parameters
+function sayHello()
+    shownl "Hello from a function!"
+endfunction
+
+# Call the function
+sayHello()
+
+# Function with a parameter
+function greet(name)
+    shownl "Hello, " + name
+endfunction
+
+# Call with argument
+greet("Alice")
+
+# Function with return value
+function add(a, b)
+    return a + b
+endfunction
+
+# Use the return value
+result = add(5, 3)
+shownl "5 + 3 = " + result 

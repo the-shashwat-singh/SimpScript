@@ -1,0 +1,54 @@
+# Function examples
+
+# Simple function with no parameters
+function sayHello()
+    shownl "Hello from a function!"
+endfunction
+
+# Call the function
+sayHello()
+
+# Function with parameters
+function greet(name)
+    shownl "Hello, " + name + "!"
+endfunction
+
+# Call with arguments
+greet("Alice")
+greet("Bob")
+
+# Function with return value
+function add(a, b)
+    return a + b
+endfunction
+
+# Use the returned value
+sum = add(5, 3)
+shownl "5 + 3 = " + sum
+
+# Function with multiple parameters and return
+function calculateArea(length, width)
+    area = length * width
+    return area
+endfunction
+
+# Call and use the return value
+rectangleArea = calculateArea(4, 6)
+shownl "Rectangle area: " + rectangleArea
+
+# Function that calls another function
+function calculatePerimeter(length, width)
+    return 2 * (length + width)
+endfunction
+
+function describeRectangle(length, width)
+    area = calculateArea(length, width)
+    perimeter = calculatePerimeter(length, width)
+    
+    shownl "Rectangle dimensions: " + length + " x " + width
+    shownl "Area: " + area
+    shownl "Perimeter: " + perimeter
+endfunction
+
+# Call the combined function
+describeRectangle(5, 10) 

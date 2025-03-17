@@ -1,0 +1,5 @@
+name = "World"
+shownl "Hello " + name
+if 2 > 1
+    shownl "Math works!"
+endif 

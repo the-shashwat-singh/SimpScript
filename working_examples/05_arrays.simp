@@ -1,0 +1,33 @@
+# Array examples
+
+# Creating an array
+numbers = [10, 20, 30, 40, 50]
+shownl "Array created: " + numbers
+
+# Accessing array elements (0-indexed)
+shownl "First element: " + numbers[0]
+shownl "Third element: " + numbers[2]
+shownl "Last element: " + numbers[4]
+
+# Modifying array elements
+numbers[1] = 25
+shownl "Modified array: " + numbers
+
+# Array length
+shownl "Array length: " + numbers[0] + numbers[1] + numbers[2] + numbers[3] + numbers[4]
+
+# Iterating through an array
+shownl "Array elements:"
+i = 0
+while i < 5
+    shownl "Element " + i + ": " + numbers[i]
+    i = i + 1
+endwhile
+
+# Creating an array of strings
+fruits = ["apple", "banana", "cherry", "date"]
+shownl "Fruits array: " + fruits
+
+# Array of mixed types
+mixed = [1, "two", 3.0, "four"]
+shownl "Mixed array: " + mixed 

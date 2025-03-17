@@ -1,0 +1,65 @@
+# Hello World program in SimpScript
+
+# Simple output
+shownl "Hello, World!"
+
+# Variables
+name = "SimpScript"
+version = 1.0
+shownl "Welcome to " + name + " version " + version
+
+# User input
+shownl "What is your name?"
+userName = ask
+shownl "Hello, " + userName + "!"
+
+# Arithmetic operations
+a = 10
+b = 5
+shownl "a + b = " + (a + b)
+shownl "a - b = " + (a - b)
+shownl "a * b = " + (a * b)
+shownl "a / b = " + (a / b)
+
+# Conditional statements with both syntax styles
+if a > b
+    shownl "a is greater than b (using > syntax)"
+endif
+
+if a greater than b
+    shownl "a is greater than b (using 'greater than' syntax)"
+endif
+
+# Arrays
+numbers = [1, 2, 3, 4, 5]
+shownl "The third element is: " + numbers[2]  # Zero-indexed
+
+# Loop with conventional syntax
+i = 0
+while i < 5
+    show numbers[i] + " "
+    i = i + 1
+endwhile
+shownl ""  # New line
+
+# Loop with human-like syntax
+i = 0
+while i less than 5
+    show numbers[i] + " "
+    i = i + 1
+endwhile
+shownl ""  # New line
+
+# Function definition
+function add(x, y)
+    return x + y
+endfunction
+
+# Function call
+result = add(10, 20)
+shownl "10 + 20 = " + result
+
+# For loop
+for i = 0; i < 3; i = i + 1
+    shownl "For loop iteration: " + i
+endfor 

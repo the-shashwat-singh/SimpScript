@@ -1,0 +1,10 @@
+# Minimal function example
+
+shownl "Before function"
+
+# Just define a function, don't call it
+function test()
+    shownl "Inside function"
+endfunction
+
+shownl "After function" 

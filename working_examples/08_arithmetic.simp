@@ -1,0 +1,31 @@
+# Basic arithmetic examples
+
+# Addition
+a = 5
+b = 3
+c = a + b
+shownl "5 + 3 = " + c
+
+# Subtraction
+d = a - b
+shownl "5 - 3 = " + d
+
+# Multiplication
+e = a * b
+shownl "5 * 3 = " + e
+
+# Division
+f = a / b
+shownl "5 / 3 = " + f
+
+# Modulo
+g = a % b
+shownl "5 % 3 = " + g
+
+# Compound expressions
+h = (a + b) * (a - b)
+shownl "(5 + 3) * (5 - 3) = " + h
+
+# Order of operations
+i = a + b * a
+shownl "5 + 3 * 5 = " + i 

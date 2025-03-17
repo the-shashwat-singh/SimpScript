@@ -1,0 +1,116 @@
+# SimpScript String and Array Operations Example
+
+# String operations
+greeting = "Hello"
+name = "World"
+
+# String concatenation
+fullGreeting = greeting + ", " + name + "!"
+shownl fullGreeting
+
+# Array creation
+fruits = ["Apple", "Banana", "Cherry", "Date", "Elderberry"]
+shownl "We have " + fruits.size() + " fruits:"
+
+# Iterate through array and print each item
+for i = 0; i < fruits.size(); i = i + 1
+    shownl (i + 1) + ". " + fruits[i]
+endfor
+
+# Array manipulation
+shownl nextl + "Let's modify the array:"
+
+# Replace an element
+fruits[1] = "Blueberry"
+
+# Print the modified array
+for i = 0; i < fruits.size(); i = i + 1
+    shownl (i + 1) + ". " + fruits[i]
+endfor
+
+# Search in array
+function findInArray(array, item)
+    for i = 0; i < array.size(); i = i + 1
+        if array[i] equals item
+            return i
+        endif
+    endfor
+    return -1
+endfunction
+
+# Use the search function
+searchItem = "Cherry"
+position = findInArray(fruits, searchItem)
+
+if position greater than -1
+    shownl nextl + "Found " + searchItem + " at position " + position
+else
+    shownl nextl + searchItem + " is not in the array"
+endif
+
+# String functions
+text = "SimpScript is simple and powerful!"
+shownl nextl + "Original text: " + text
+
+# Convert to uppercase function
+function toUpper(str)
+    result = ""
+    for i = 0; i < str.length(); i = i + 1
+        char = str[i]
+        code = char.charCode()
+        if code >= 97 and code <= 122
+            # Convert lowercase to uppercase by subtracting 32 from ASCII value
+            result = result + char.fromCharCode(code - 32)
+        else
+            result = result + char
+        endif
+    endfor
+    return result
+endfunction
+
+uppercased = toUpper(text)
+shownl "Uppercase: " + uppercased
+
+# Reverse string function
+function reverse(str)
+    result = ""
+    for i = str.length() - 1; i >= 0; i = i - 1
+        result = result + str[i]
+    endfor
+    return result
+endfunction
+
+reversed = reverse(text)
+shownl "Reversed: " + reversed
+
+# Count occurrences of a character
+function countChar(str, char)
+    count = 0
+    for i = 0; i < str.length(); i = i + 1
+        if str[i] equals char
+            count = count + 1
+        endif
+    endfor
+    return count
+endfunction
+
+charToCount = "i"
+occurrences = countChar(text, charToCount)
+shownl "The character '" + charToCount + "' appears " + occurrences + " times"
+
+# Demonstrate different ways to check conditions
+numbers = [10, 20, 30, 40, 50]
+
+# Using conventional syntax
+for i = 0; i < numbers.size(); i = i + 1
+    if numbers[i] > 25
+        shownl numbers[i] + " is greater than 25 (using >)"
+    endif
+endfor
+
+# Using human-like syntax
+for i = 0; i < numbers.size(); i = i + 1
+    if numbers[i] greater than 25
+        shownl numbers[i] + " is greater than 25 (using 'greater than')"
+    endif
+endfor 

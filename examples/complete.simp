@@ -1,0 +1,31 @@
+# Complete test of SimpScript features
+
+# Variables and basic operations
+name = "World"
+count = 3
+shownl "Hello, " + name + "! Counting to " + count
+
+# Loop with counter
+i = 1
+while i <= count
+    shownl "Count: " + i
+    i = i + 1
+endwhile
+
+# Conditional
+if count > 2
+    shownl "That's more than two!"
+endif
+
+# Simple function
+function add(x, y)
+    return x + y
+endfunction
+
+# Function call
+result = add(10, 20)
+shownl "10 + 20 = " + result
+
+# Array
+numbers = [1, 2, 3, 4, 5]
+shownl "The third element is: " + numbers[2] 
